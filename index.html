@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --dark-bg: #2c3e50;
+            --light-bg: #f5f5f5;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Lead Section */
+        .lead {
+            height: 100vh;
+            background: var(--dark-bg);
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .lead-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lead h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .lead h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Experience and Education */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--dark-bg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .lead h1 {
+                font-size: 2.5rem;
+            }
+
+            .lead h2 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="lead">
+        <div class="lead-content">
+            <h1>Your Name</h1>
+            <h2>Software Developer</h2>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About</h2>
+            </div>
+            <div class="about-content">
+                <div>
+                    <p>I am a passionate software developer with experience in web development and system design. I enjoy creating efficient, scalable solutions to complex problems.</p>
+                </div>
+                <div>
+                    <p>My focus includes full-stack development, cloud architecture, and developing user-friendly applications that make a difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Senior Software Developer</h3>
+                    <div class="date">2020 - Present</div>
+                    <p>Company Name</p>
+                    <ul>
+                        <li>Led development of key features for main product</li>
+                        <li>Managed team of 5 developers</li>
+                        <li>Implemented CI/CD pipeline</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Software Developer</h3>
+                    <div class="date">2018 - 2020</div>
+                    <p>Previous Company</p>
+                    <ul>
+                        <li>Developed full-stack applications</li>
+                        <li>Collaborated with cross-functional teams</li>
+                        <li>Improved application performance by 40%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Master of Computer Science</h3>
+                    <div class="date">2016 - 2018</div>
+                    <p>University Name</p>
+                    <ul>
+                        <li>Specialized in Machine Learning</li>
+                        <li>GPA: 3.8/4.0</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Bachelor of Computer Science</h3>
+                    <div class="date">2012 - 2016</div>
+                    <p>University Name</p>
+                    <ul>
+                        <li>Dean's List all semesters</li>
+                        <li>Led Programming Club</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>Project Name</h3>
+                        <p>Description of the project and its impact. Technologies used and key features implemented.</p>
+                        <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>Another Project</h3>
+                        <p>Description of another significant project showcasing different skills and technologies.</p>
+                        <p><strong>Technologies:</strong> Python, Django, PostgreSQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>JavaScript (ES6+)</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Django</li>
+                        <li>Spring Boot</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                        <li>Jenkins</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-content">
+                <p>I'm always interested in hearing about new projects and opportunities.</p>
+                <p>Email me at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
