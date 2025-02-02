@@ -204,6 +204,58 @@
             background: #e2e8f0;
         }
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .project-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .project-description {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--light-bg);
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
         /* Enhanced Contact Section */
         .contact-content {
             max-width: 700px;
@@ -385,6 +437,27 @@
         </div>
     </section>
 
+    <section id="projects" class="animate-fadeIn">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>Stock Exchange Simulation</h3>
+                        <p class="project-description">Developed a stock exchange simulation system using Python.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="skills" class="animate-fadeIn">
         <div class="container">
             <div class="section-header">
