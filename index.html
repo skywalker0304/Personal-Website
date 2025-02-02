@@ -295,6 +295,34 @@
             transform: translateY(-3px);
         }
 
+        .resume-button {
+            margin-top: 2rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .download-btn:hover {
+            background-color: transparent;
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        .download-btn i {
+            font-size: 1.1rem;
+        }
+
         /* Add smooth scrolling */
         html {
             scroll-behavior: smooth;
@@ -358,6 +386,11 @@
                 <a href="https://github.com/skywalker0304" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/kevin-tien-hsing-lin-8b791a1b1/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:tienhsinglin.a@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="resume-button">
+                <a href="CV.pdf" download class="download-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
             </div>
         </div>
     </section>
