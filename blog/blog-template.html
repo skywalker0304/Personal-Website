@@ -92,15 +92,6 @@
             background-color: rgba(37, 99, 235, 0.1);
             font-style: italic;
         }
-
-        /* Meta information styling */
-        .post-meta {
-            text-align: center;
-            color: #64748b;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>
@@ -134,15 +125,6 @@
                 const firstH1 = content.querySelector('h1');
                 if (firstH1) {
                     document.title = firstH1.textContent + " - Kevin Lin's Blog";
-                }
-
-                // Add meta information if it exists in the markdown
-                const metaMatch = text.match(/\*(.+)\*/);
-                if (metaMatch) {
-                    const metaDiv = document.createElement('div');
-                    metaDiv.className = 'post-meta';
-                    metaDiv.textContent = metaMatch[1];
-                    firstH1.insertAdjacentElement('afterend', metaDiv);
                 }
             } catch (error) {
                 console.error('Error loading markdown:', error);

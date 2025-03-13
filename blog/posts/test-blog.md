@@ -1,7 +1,5 @@
 # My Journey into Quantitative Research
 
-*March 15, 2024 · 5 min read · Category: Research*
-
 ## The Beginning
 
 My journey into quantitative research began during my undergraduate years at National Taiwan University. 
