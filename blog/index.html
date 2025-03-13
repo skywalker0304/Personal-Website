@@ -79,13 +79,21 @@
             color: #64748b;
             font-size: 0.9rem;
             margin-bottom: 1rem;
-            display: flex;
-            gap: 1rem;
+            font-style: italic;
+        }
+
+        .post-meta span {
+            margin-right: 1rem;
+        }
+
+        .post-meta i {
+            margin-right: 0.3rem;
         }
 
         .post-excerpt {
             color: var(--text-color);
             line-height: 1.6;
+            margin-top: 1rem;
         }
 
         .back-link {
@@ -113,7 +121,9 @@
             <article class="blog-post">
                 <h2><a href="blog-template.html?post=test-blog">This is a test blog.</a></h2>
                 <div class="post-meta">
-                    <span class="date">March 13, 2025</span>
+                    <span><i class="far fa-calendar"></i>March 15, 2024</span>
+                    <span><i class="far fa-clock"></i>5 min read</span>
+                    <span><i class="far fa-folder"></i>Research</span>
                 </div>
                 <p class="post-excerpt">testing</p>
             </article>
