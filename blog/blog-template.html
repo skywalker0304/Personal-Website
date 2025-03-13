@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Kevin Lin's Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add marked.js for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Your existing styles here */
+        
+        /* Additional styles for markdown content */
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .markdown-content code {
+            background-color: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .markdown-content pre {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        .markdown-content pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            margin: 1.5rem 0;
+            padding: 1rem 0 1rem 2rem;
+            background-color: rgba(37, 99, 235, 0.1);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Blog</a>
+        
+        <article>
+            <div id="content" class="markdown-content">
+                <!-- Markdown content will be inserted here -->
+            </div>
+        </article>
+
+        <a href="index.html" class="back-link">← Back to Blog</a>
+    </div>
+
+    <script>
+        async function loadMarkdownContent() {
+            try {
+                // Get the post name from URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const postName = urlParams.get('post');
+                
+                if (!postName) {
+                    throw new Error('No post specified');
+                }
+
+                const response = await fetch(`posts/${postName}.md`);
+                const text = await response.text();
+                const content = document.getElementById('content');
+                content.innerHTML = marked.parse(text);
+
+                // Update page title from the first h1 in the markdown
+                const firstH1 = content.querySelector('h1');
+                if (firstH1) {
+                    document.title = firstH1.textContent + " - Kevin Lin's Blog";
+                }
+            } catch (error) {
+                console.error('Error loading markdown:', error);
+                document.getElementById('content').innerHTML = '<p>Post not found</p>';
+            }
+        }
+
+        window.addEventListener('load', loadMarkdownContent);
+    </script>
+</body>
+</html>
