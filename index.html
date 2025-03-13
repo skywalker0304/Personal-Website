@@ -323,6 +323,45 @@
             font-size: 1.1rem;
         }
 
+        .blog-button {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .blog-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: transparent;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .blog-btn:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .blog-btn i {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         /* Add smooth scrolling */
         html {
             scroll-behavior: smooth;
@@ -390,6 +429,11 @@
             <div class="resume-button">
                 <a href="CV.pdf" download class="download-btn">
                     <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+            <div class="blog-button">
+                <a href="./blog/index.html" class="blog-btn">
+                    <i class="fas fa-book-reader"></i> Read My Blog
                 </a>
             </div>
         </div>
